@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+    <title>Document</title>
+</head>
+<body>
+<section>
+    <h1>WHAT DOES YOUR NAME REPRESENTS?</h1>
+    <div class="surrounder">
+        <div class="mainpart">
+            <h3>Enter your name~</h3>
+            <input type="text" id="name" placeholder="Your name">
+            
+        </div>
+        <div class="image">
+            <img src="img/image.png" alt="Welcome!" id="image"/>
+        </div>
+        <button>Show!</button>
+    </div>
+</section>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script>
+      $(document).ready(function()
+      {
+        $('button').click(function()
+        {
+           var a=$('#name').val();
+           alert("Name is : "+a);
+
+           $('#image').attr('src',`https://joeschmoe.io/api/v1/${a}`)
+        });
+      });
+</script>
+</body>
+</html>
